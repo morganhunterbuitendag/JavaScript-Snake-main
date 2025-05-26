@@ -528,7 +528,10 @@ SNAKE.Snake =
           blocks[ii].elm.className += " snake-snakebody-alive";
         }
 
-        blockPool.concat(blocks);
+        // Add the reset blocks back into the pool so they can be reused.
+        // Array.concat returns a new array without mutating the original,
+        // so use push with the spread operator instead.
+        blockPool.push(...blocks);
         me.snakeHead.elm.className = me.snakeHead.elm.className.replace(
           /\bsnake-snakebody-dead\b/,
           "",
