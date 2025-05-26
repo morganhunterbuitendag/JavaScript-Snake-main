@@ -15,7 +15,7 @@
       rel="stylesheet"
       id="style"
       type="text/css"
-      href="css/main-snake.css"
+      href="css/modern-snake.css"
     />
     <link rel="shortcut icon" href="css/images/favicon.png" />
     <style>
@@ -24,7 +24,33 @@
         top: 0;
         left: 0;
         z-index: 10000;
-        padding: 5px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 6px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .snake-toolbar select,
+      .snake-toolbar button {
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: none;
+        font-size: 14px;
+      }
+
+      .snake-toolbar button {
+        background-color: #ff7f50;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .toolbar-group {
+        display: flex;
+        align-items: center;
+        gap: 5px;
       }
     </style>
     <script>
@@ -70,6 +96,9 @@
           case 8:
             changeTheme("css/neon-snake.css?" + Math.random());
             break;
+          case 9:
+            changeTheme("css/modern-snake.css?" + Math.random());
+            break;
           default:
             changeTheme("css/main-snake.css?" + Math.random());
             break;
@@ -91,11 +120,11 @@
   --></head>
   <body>
     <div class="snake-toolbar">
-      <div style="display: inline-block; margin-right: 10px">
+      <div class="toolbar-group">
         <span>Theme:</span>
         <select autocomplete="off" id="select">
           <option>Light Theme by yokesharun</option>
-          <option selected>Main Theme by patorjk</option>
+          <option>Main Theme by patorjk</option>
           <option>Dark Theme by KenyStev</option>
           <option>Green Theme by CoffeeCatDE</option>
           <option>Matrix Theme by Geahad Haymor</option>
@@ -103,9 +132,10 @@
           <option>Snake Head Theme by Rb64</option>
           <option>Black and purple Theme by LucassSantoss</option>
           <option>Neon Theme by Daisy21000</option>
+          <option selected>Modern Theme</option>
         </select>
       </div>
-      <div style="display: inline-block; margin-right: 10px">
+      <div class="toolbar-group">
         <div>Moragns game</div>
         <span>Mode:</span>
         <select id="selectMode">
@@ -117,10 +147,9 @@
         </select>
       </div>
       <button id="go_full_screen">Full Screen</button>
-      <br />
     </div>
 
-    <div id="mode-wrapper" style="display: inline; width: auto"></div>
+    <div id="mode-wrapper"></div>
 
     <div id="game-area" tabindex="0"></div>
     <script type="text/javascript" src="js/snake.js"></script>

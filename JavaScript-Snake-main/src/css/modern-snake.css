@@ -1,0 +1,148 @@
+/*
+Modern Theme for JavaScript Snake
+Author: Codex
+*/
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f4037 0%, #99f2c8 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.snake-toolbar {
+  color: #ffffff;
+}
+
+#game-area {
+  margin: 10px;
+  padding: 0;
+}
+
+#mode-wrapper {
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+#game-area:focus {
+  outline: none;
+}
+
+a.snake-link,
+a.snake-link:link,
+a.snake-link:visited {
+  color: #f2ff5a;
+}
+
+a.snake-link:hover {
+  color: #ffffff;
+}
+
+.snake-pause-screen {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -150px;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.snake-panel-component {
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  padding: 8px;
+  margin: 0;
+}
+
+.snake-snakebody-block {
+  margin: 0;
+  padding: 0;
+  background-color: #ff0000;
+  position: absolute;
+  border: 0;
+  background-repeat: no-repeat;
+}
+
+.snake-snakebody-alive {
+  background-image: url("./images/snakeblock.png"), url("./images/snakeblock.png");
+}
+.snake-snakebody-dead {
+  background-image: url("./images/deadblock.png"), url("./images/deadblock.png");
+}
+
+.snake-food-block {
+  margin: 0;
+  padding: 0;
+  background-color: #ff0000;
+  border: 0;
+  position: absolute;
+  border-radius: 4px;
+}
+
+.snake-playing-field {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-color: #0d3b66;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.snake-game-container {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-style: none;
+  zoom: 1;
+  position: relative;
+}
+
+.snake-welcome-dialog {
+  padding: 8px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  margin-top: -100px;
+  margin-left: -150px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+}
+
+.snake-try-again-dialog,
+.snake-win-dialog {
+  padding: 8px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 100px;
+  margin-top: -75px;
+  margin-left: -150px;
+  text-align: center;
+  display: none;
+  border-radius: 8px;
+}
